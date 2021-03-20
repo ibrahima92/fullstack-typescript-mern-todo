@@ -16,15 +16,17 @@ app.use(bodyParser.json());
 // Priority serve any static files.
 
 console.log("__dirname", __dirname);
-app.use(express.static(path.resolve(__dirname, "../../../client/build")));
+app.use(express.static(path.resolve(__dirname, "../../../build")));
 
 app.use(todoRoutes);
 
+// __dirname / Users / katarzynawegorek / kwegorek / fullstack -
+//   typescript -
+//   mern -
+//   todo / client / server / dist / js;
 // All remaining requests return the React app, so it can handle routing.
 app.get("*", function (request, response) {
-  response.sendFile(
-    path.resolve(__dirname, "../../../client/build", "index.html")
-  );
+  response.sendFile(path.resolve(__dirname, "../../../build", "index.html"));
 });
 
 const uri: string = "mongodb://127.0.0.1:27017/mydatabase";
