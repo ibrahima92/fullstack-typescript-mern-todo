@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+*** added proxy in package.json -> this tells React to proxy API requests to the Node.js server built with Express.
 ## Available Scripts
 
 In the project directory, you can run:

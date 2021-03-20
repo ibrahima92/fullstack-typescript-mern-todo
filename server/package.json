@@ -5,20 +5,22 @@
   "main": "app.js",
   "scripts": {
     "build": "tsc",
-    "start": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\""
+    "start": "node dist/js/app.js",
+    "start-dev": "concurrently \"tsc -w\" \"nodemon dist/js/app.js\"",
+    "deploy": "pwd && git push heroku master"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.9.20"
+    "mongoose": "5.11.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.6",
     "@types/express": "^4.17.6",
-    "@types/mongoose": "^5.7.29",
     "@types/node": "^14.0.14",
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4"

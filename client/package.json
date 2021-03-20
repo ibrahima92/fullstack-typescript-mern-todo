@@ -1,6 +1,7 @@
 {
-    "name": "jotali",
+    "name": "client",
     "version": "0.1.0",
+    "proxy": "http://localhost:4000",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^4.2.4",
@@ -15,6 +16,7 @@
         "react-dom": "^16.13.1",
         "react-scripts": "3.4.1",
         "typescript": "~3.7.2"
+
     },
     "scripts": {
         "start": "react-scripts start",
